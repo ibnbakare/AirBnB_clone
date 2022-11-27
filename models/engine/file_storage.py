@@ -43,3 +43,15 @@ class FileStorage:
             for k, v in self.__objects.items():
                 dict_storage[k] = v.to_dict()
             json.dump(dict_storage, f)
+
+    def reload(self):
+        """
+        Deserializes the JSON file to __objects
+        -> Only IF it exists!
+        """
+        try:
+            with open(self.__file_path, encoding="utf-8") as f:
+                for obj in json.load(f).values():
+                    self.new(eval(obj["__class__"])(**obj))
+        except FileNotFoundError:
+            return
