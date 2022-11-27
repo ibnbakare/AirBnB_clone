@@ -54,7 +54,7 @@ class TestPlace_instantiation(unittest.TestCase):
         pl = Place()
         self.assertEqual(str, type(Place.description))
         self.assertIn("description", dir(pl))
-        self.assertNotIn("desctiption", pl.__dict__)
+        self.assertNotIn("description", pl.__dict__)
 
     def test_number_rooms_is_public_class_attribute(self):
         pl = Place()

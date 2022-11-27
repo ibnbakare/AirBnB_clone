@@ -67,7 +67,7 @@ class FileStorage:
             pass
 
     def find_by_id(self, model, obj_id):
-        """Find and return an elemt of model by its id"""
+        """Find and return an element of model by its id"""
         F = FileStorage
         if model not in F.models:
             # Invalid Model Name
@@ -83,7 +83,7 @@ class FileStorage:
         return F.__objects[key]
 
     def delete_by_id(self, model, obj_id):
-        """Find and return an elemt of model by its id"""
+        """Find and return an element of model by its id"""
         F = FileStorage
         if model not in F.models:
             raise ModelNotFoundError(model)

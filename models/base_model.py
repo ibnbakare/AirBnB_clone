@@ -13,7 +13,7 @@ class BaseModel:
 
     def __init__(self, *args, **kwargs):
         """constructor it either deserialize
-        a serialized class or intialize a new"""
+        a serialized class or initialize a new"""
 
         # initialize if nothing is passed
         if kwargs == {}:
@@ -38,7 +38,7 @@ class BaseModel:
                     '%Y-%m-%dT%H:%M:%S.%f')
 
     def __str__(self):
-        """overide str representation of self"""
+        """override str representation of self"""
         fmt = "[{}] ({}) {}"
         return fmt.format(
                 type(self).__name__,

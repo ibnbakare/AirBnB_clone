@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Defines the custome errors used in File Storage
+Defines the customer errors used in File Storage
 """
 
 
@@ -16,4 +16,4 @@ class InstanceNotFoundError(Exception):
 
     def __init__(self, obj_id="", mod="BaseModel"):
         super().__init__(
-                f"Insatnce of {mod} with id {obj_id} does not exist!")
+                f"Instance of {mod} with id {obj_id} does not exist!")
