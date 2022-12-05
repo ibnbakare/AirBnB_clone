@@ -5,3 +5,9 @@ header {
     color: white;
     border-bottom: 1px solid #ccc;
 }
+header .logo {
+    height: inherit;
+    width: inherit;
+    background: url("../images/logo.png") no-repeat;
+    margin-left: 20px;    
+}
