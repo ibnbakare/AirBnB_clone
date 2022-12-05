@@ -50,7 +50,7 @@ class FileStorage:
             for key, val in self.__objects.items()
         }
         with open(FileStorage.__file_path, "w") as f:
-            f.write(json.dumps(serialized))
+            f.write(json.dumps(serialized,indent=2))
 
     def reload(self):
         """de-serialize persisted objects"""
